@@ -1,0 +1,7 @@
+{
+  "name": "ion-t-Cagubcub",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
