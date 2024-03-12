@@ -1,6 +1,7 @@
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle,
-  IonAlert, IonButton,  } from '@ionic/react';
+  IonAlert, IonButton, 
+  IonActionSheet} from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
 
@@ -19,7 +20,7 @@ const Tab1: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <IonCard>
-      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <img alt="Silhouette of mountains" src="../src/img/aladdin.png" />
       <IonCardHeader>
         <IonCardTitle>Aladdinskie24</IonCardTitle>
         <IonCardSubtitle>Student</IonCardSubtitle>
@@ -35,7 +36,34 @@ const Tab1: React.FC = () => {
         message="A message should be a short, complete sentence."
         buttons={['Action']}
       ></IonAlert>
-
+     
+     <IonButton color="warning" id="open-action-sheet" expand="block">Open Action Sheet</IonButton>
+     <IonActionSheet
+        trigger="open-action-sheet"
+        header="Actions"
+        buttons={[
+          {
+            text: 'Delete',
+            role: 'destructive',
+            data: {
+              action: 'delete',
+            },
+          },
+          {
+            text: 'Share',
+            data: {
+              action: 'share',
+            },
+          },
+          {
+            text: 'Cancel',
+            role: 'cancel',
+            data: {
+              action: 'cancel',
+            },
+          },
+        ]}
+      ></IonActionSheet>
   
     </IonCard>
 
