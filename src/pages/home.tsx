@@ -1,29 +1,57 @@
-import {
-    //Initial Components
-    IonContent, IonHeader, IonPage, IonTitle, IonToolbar,
-} from '@ionic/react';
+import React from 'react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonButton, IonIcon } from '@ionic/react';
+import { RouteComponentProps } from 'react-router';
+import ClickCounter from './Tab2';
+import { alarmOutline, calculatorOutline } from 'ionicons/icons';
 
-// CSS
-//import './profile.css';
+const Home: React.FC<RouteComponentProps> = ({ history }) => {
+  const goToCalculator = () => {
+    history.push('/calculator');
+  }
+  return (
+    <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonTitle>Home</IonTitle>
+        </IonToolbar>
+      </IonHeader>
 
-  const Home: React.FC = () => {
-    return (
-      <IonPage>
-        <IonHeader>
-          <IonToolbar>
-            <IonTitle>Home</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <IonContent fullscreen>
-          <IonHeader collapse="condense">
-            <IonToolbar>
-              <IonTitle size="large">Home</IonTitle>
-            </IonToolbar>
-          </IonHeader>
-        </IonContent>
-      </IonPage>
-    );
-  };
+      <IonContent fullscreen>
+        <IonCard>
+          <img src="https://m.media-amazon.com/images/M/MV5BMzlkYTI3MWItMjU2NS00MjIzLTg2MzAtZDNiODQzMjBhMmM3XkEyXkFqcGdeQTNwaW5nZXN0._V1_QL75_UX500_CR0,0,500,281_.jpg" alt="Profile" />
+          <IonCardHeader>
+            <IonCardTitle>Welcome to my Application</IonCardTitle>
+            <IonCardSubtitle>canceran naaa</IonCardSubtitle>
+          </IonCardHeader>
+          <IonCardContent>Feel free to contact me when you have concerns. Love yahhhh:)</IonCardContent>
+        </IonCard>
 
-  //
-  export default Home;
+<IonCard>
+    <IonCardContent>
+    <IonButton expand="block" routerLink='/Clickcounter'>
+    <IonIcon icon={alarmOutline} slot="start" />
+     Clickcounter
+    </IonButton>
+   </IonCardContent>
+
+
+   <IonCardContent>
+    <IonButton expand="block" routerLink='/calculator'>
+    <IonIcon icon={calculatorOutline} slot="start" />
+     calculator
+    </IonButton>
+   </IonCardContent>
+
+   <IonCardContent>
+    <IonButton expand="block" routerLink='/todolist'>
+    <IonIcon icon={calculatorOutline} slot="start" />
+     todolist
+    </IonButton>
+   </IonCardContent>
+
+  </IonCard>
+      </IonContent>
+    </IonPage>
+  );
+};
+export default Home;
