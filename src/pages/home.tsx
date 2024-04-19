@@ -28,7 +28,7 @@ const Home: React.FC<RouteComponentProps> = ({ history }) => {
 
 <IonCard>
     <IonCardContent>
-    <IonButton expand="block" routerLink='/Clickcounter'>
+    <IonButton expand="block" routerLink='/Tab2'>
     <IonIcon icon={alarmOutline} slot="start" />
      Clickcounter
     </IonButton>
@@ -36,7 +36,7 @@ const Home: React.FC<RouteComponentProps> = ({ history }) => {
 
 
    <IonCardContent>
-    <IonButton expand="block" routerLink='/calculator'>
+    <IonButton expand="block" routerLink='/Tab3'>
     <IonIcon icon={calculatorOutline} slot="start" />
      calculator
     </IonButton>
