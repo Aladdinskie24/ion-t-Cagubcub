@@ -45,6 +45,19 @@ const TodoList: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
+       {/* Todo input */}
+        <IonItem>
+          <IonInput
+            placeholder="Add a new task"
+            value={newTask}
+            onIonChange={(e) => setNewTask(e.detail.value!)}
+          />
+          <IonButton slot="end" onClick={addTask}>
+            Add
+          </IonButton>
+        </IonItem>
+        
+      {/* Todo output */}
         <IonList>
           {tasks.map((task, index) => (
             <IonItem key={index}>
@@ -56,16 +69,6 @@ const TodoList: React.FC = () => {
             </IonItem>
           ))}
         </IonList>
-        <IonItem>
-          <IonInput
-            placeholder="Add a new task"
-            value={newTask}
-            onIonChange={(e) => setNewTask(e.detail.value!)}
-          />
-          <IonButton slot="end" onClick={addTask}>
-            Add
-          </IonButton>
-        </IonItem>
       </IonContent>
     </IonPage>
   );
