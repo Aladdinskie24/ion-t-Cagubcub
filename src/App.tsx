@@ -19,7 +19,6 @@ import Calculator from './pages/Calculator';
 import Todolist from './pages/todolist';
 import QuoteGenerator from './pages/quotegenerator';
 
-
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -46,14 +45,15 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          
           {/* Application default route */}
+
            <Route exact path="/">
             <Redirect to="/home" />
           </Route>
-
+        
           <Route exact path="/home">
             <Home />
+
           </Route>
 
           <Route exact path="/profile">
@@ -87,6 +87,7 @@ const App: React.FC = () => (
           </IonTabButton>
        
           <IonTabButton tab="profile" href="/profile">
+
             <IonIcon aria-hidden="true" icon={personOutline} />
             <IonLabel>Profile</IonLabel>
           </IonTabButton>
