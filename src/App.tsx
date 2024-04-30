@@ -10,14 +10,14 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { calculatorOutline, ellipse, personOutline, home, speedometerOutline, square, triangle } from 'ionicons/icons';
+import { calculatorOutline, ellipse, home, personOutline, speedometerOutline, square, triangle } from 'ionicons/icons';
 
-// Home resources
 import Home from './pages/home';
-
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+import Profile from './pages/Profile';
+import ClickCounter from './pages/Clickcounter'; 
+import Calculator from './pages/Calculator';
+import Todolist from './pages/todolist';
+import QuoteGenerator from './pages/quotegenerator';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -45,48 +45,53 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-           {/* Application default route */}
+          {/* Application default route */}
+
            <Route exact path="/">
             <Redirect to="/home" />
           </Route>
-
-          {/* Home Router */}
+        
           <Route exact path="/home">
             <Home />
+
           </Route>
 
-          <Route exact path="/tab1">
-            <Tab1 />
+          <Route exact path="/profile">
+            <Profile />
           </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
+          <Route exact path="/clickcounter">
+            <ClickCounter />
           </Route>
-          <Route path="/tab3">
-            <Tab3 />
+          <Route path="/calculator">
+            <Calculator />
           </Route>
-          <Route exact path="/">
-            <Redirect to="/tab1" />
+
+          <Route path="/todolist">
+            <Todolist />
           </Route>
+
+          <Route path="/quotegenerator">
+            <QuoteGenerator />
+          </Route>
+
+         
+
         </IonRouterOutlet>
 
+      {/* Tab Buttons */}
         <IonTabBar slot="bottom">
-            {/* Home Tab Button */}
-            <IonTabButton tab="home" href="/home">
+
+          <IonTabButton tab="home" href="/home">
             <IonIcon aria-hidden="true" icon={home} />
             <IonLabel>Home</IonLabel>
-          </IonTabButton> 
-          <IonTabButton tab="tab1" href="/tab1">
+          </IonTabButton>
+       
+          <IonTabButton tab="profile" href="/profile">
+
             <IonIcon aria-hidden="true" icon={personOutline} />
             <IonLabel>Profile</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon aria-hidden="true" icon={speedometerOutline} />
-            <IonLabel>Click Counter</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={calculatorOutline} />
-            <IonLabel>Calculator</IonLabel>
-          </IonTabButton>
+      
         </IonTabBar>
 
       </IonTabs>
