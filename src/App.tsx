@@ -15,9 +15,9 @@ import { calculatorOutline, ellipse, home, personOutline, speedometerOutline, sq
 // Home resources
 import Home from './pages/home';
 
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+import Tab1 from './pages/Profile';
+import Tab2 from './pages/ClickCounter';
+import Tab3 from './pages/Calculator';
 import Tab4 from './pages/todolist';
 
 /* Core CSS required for Ionic components to work properly */
