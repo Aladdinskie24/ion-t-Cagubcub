@@ -1,9 +1,12 @@
 {
-  "name": "ion-t-Cagubcub",
+  "name": "ion-t-cagubcub",
   "private": true,
   "version": "0.0.1",
   "type": "module",
+  "homepage": "https://Aladdinskie24.github.io/ion-t-cagubcub/",
   "scripts": {
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
