@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "ion-t-cagubcub/",
+  base: 'ion-t-cagubcub/',
   plugins: [
     react(),
     legacy()
